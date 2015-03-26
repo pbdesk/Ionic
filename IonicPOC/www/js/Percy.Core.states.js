@@ -44,6 +44,15 @@
               }
             }
           })
+        
+        .state('app.inspiration', {
+            url: "/inspiration",
+            views: {
+              'menuContent': {
+                templateUrl: "templates/inspiration.html"
+              }
+            }
+          })
 
           .state('app.browse', {
             url: "/browse",

@@ -8,31 +8,36 @@
   </ion-header-bar>
   <ion-content>
     <form ng-submit="doLogin()">
+        
       <div class="list">
-          <div class="list">
-  <label class="item item-input item-floating-label">
-    <span class="input-label">First Name</span>
-    <input type="text" placeholder="First Name">
-  </label>
-  <label class="item item-input item-floating-label">
-    <span class="input-label">Last Name</span>
-    <input type="text" placeholder="Last Name">
-  </label>
-  <label class="item item-input item-floating-label">
-    <span class="input-label">Email</span>
-    <input type="text" placeholder="Email">
-  </label>
-</div>
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Gender
+            </div>
+            <select>
+              <option>Male</option>
+              <option selected>Female</option>
+            </select>
+          </label>
+          <label class="item item-input">
+            <span class="input-label" >Age</span>
+            <input type="number" value="40">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">ZipCode</span>
+            <input type="number" placeholder="ZipCode">
+          </label>
+         
         <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
+          <span class="input-label">Age</span>
+          <input type="number" ng-model="loginData.username">
         </label>
         <label class="item item-input">
           <span class="input-label">Password</span>
           <input type="password" ng-model="loginData.password">
         </label>
         <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
+          <button class="button button-block button-positive" type="submit">Save</button>
         </label>
       </div>
     </form>
