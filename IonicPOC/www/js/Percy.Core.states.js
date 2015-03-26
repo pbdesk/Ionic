@@ -15,6 +15,26 @@
             templateUrl: "templates/menu.html",
             controller: 'AppCtrl'
           })
+        
+        .state('app.home', {
+              url: "/home",
+              views: {
+                'menuContent': {
+                  templateUrl: "templates/home.html",
+                  controller: 'homeController as vm'
+                }
+              }
+            })
+        
+        .state('app.about', {
+              url: "/about",
+              views: {
+                'menuContent': {
+                  templateUrl: "templates/about.html",
+                  controller: 'aboutController as vm'
+                }
+              }
+            })
 
           .state('app.search', {
             url: "/search",
@@ -53,6 +73,6 @@
             }
           });
           // if none of the above states are matched, use this as the fallback
-          $urlRouterProvider.otherwise('/app/playlists');
+          $urlRouterProvider.otherwise('/home');
         });
 })();
